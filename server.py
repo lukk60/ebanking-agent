@@ -17,7 +17,7 @@ class UserContext:
         self.customer_id = customer_id
 
 # Global user context (in production, this would come from authentication)
-current_user = None
+current_user = UserContext(user_id="CUST001", customer_id="CUST001")
 
 def set_user_context(user_id: str, customer_id: str):
     """Set the current user context"""
